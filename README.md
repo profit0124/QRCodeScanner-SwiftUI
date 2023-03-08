@@ -50,3 +50,39 @@ private func settting() {
         
 </code>
 </pre>
+
+<pre>
+<code>
+extension QRCodeReaderViewController: AVCaptureMetadataOutputObjectsDelegate {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        if let metadataObject = metadataObjects.first {
+            guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject, let stringValue = readableObject.stringValue else {
+                return
+            }
+            // URL 주소의 QR 코드 값이 읽힐 때만 Label 변경
+            if stringValue.hasPrefix("http://") || stringValue.hasPrefix("https://")  {
+                labelView.text = stringValue
+            }
+        }
+    }
+}
+</code>
+</pre>
+
+
+<pre>
+<code>
+struct QRCodeReaderViewRepresentable: UIViewControllerRepresentable {
+    
+    typealias UIViewControllerType = QRCodeReaderViewController
+    
+    func makeUIViewController(context: Context) -> QRCodeReaderViewController {
+        let qr = QRCodeReaderViewController()
+        return qr
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    }
+}
+</code>
+</pre>
