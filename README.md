@@ -87,6 +87,12 @@ struct QRCodeReaderViewRepresentable: UIViewControllerRepresentable {
 </code>
 </pre>
 
+
+https://user-images.githubusercontent.com/31499563/223707363-d313a46a-7eb8-4829-8baa-552a7ede1529.mp4
+
+
+
+
 1. 참고 : https://developer.apple.com/documentation/avfoundation
 2. 참고 : https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable
 3. 참고 : https://gyuios.tistory.com/79
