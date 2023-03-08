@@ -86,3 +86,10 @@ struct QRCodeReaderViewRepresentable: UIViewControllerRepresentable {
 }
 </code>
 </pre>
+
+참고 : https://developer.apple.com/documentation/avfoundation
+참고 : https://developer.apple.com/documentation/swiftui/uiviewcontrollerrepresentable
+참고 : https://gyuios.tistory.com/79
+참고 : https://nebori.tistory.com/28
+참고 : https://hururuek-chapchap.tistory.com/34
+참고 : https://blog.devgenius.io/camera-preview-and-a-qr-code-scanner-in-swiftui-48b111155c66
