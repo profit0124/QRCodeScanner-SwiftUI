@@ -7,9 +7,16 @@
 
 import SwiftUI
 
-struct QRCodeReaderViewRepresentable: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct QRCodeReaderViewRepresentable: UIViewControllerRepresentable {
+    
+    typealias UIViewControllerType = QRCodeReaderViewController
+    
+    func makeUIViewController(context: Context) -> QRCodeReaderViewController {
+        let qr = QRCodeReaderViewController()
+        return qr
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
     }
 }
 
